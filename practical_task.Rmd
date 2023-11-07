@@ -16,12 +16,12 @@ Links for downloading programs:
 
 3. Git: <https://git-scm.com/> (optional, if you want to push and pull changes to Github from RStudio).
 
-The results of laboratory work must be placed in your repository on Github in the files `LabX.Rmd` (or `LabX.qmd` if you prefer to use quarto) and generated from it `LabX.html`, where X is the number of the laboratory in the form: **question**, **code**, **result** (if necessary). So, the file structure could looks like:
+The results of laboratory work must be placed in your repository on Github in the files `TaskX.Rmd` (or `TaskX.qmd` if you prefer to use quarto) and generated from it `TaskX.html`, where X is the number of the laboratory in the form: **question**, **code**, **result** (if necessary). So, the file structure could looks like:
 
 ```
 --ComputerSupportSTU
-  |--Lab1.Rmd
-  |--Lab1.html
+  |--Task1.Rmd
+  |--Task1.html
 ```
 
 
