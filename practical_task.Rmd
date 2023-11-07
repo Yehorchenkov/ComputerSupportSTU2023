@@ -1,0 +1,147 @@
+---
+title: "Computer Support Practical Tasks"
+date: "11/22/2022"
+output: html_document
+---
+
+## Introduction
+
+For performing practical tasks **R** and **R Studio** have to be installed.
+
+Links for downloading programs: 
+
+1. R: <https://cran.r-project.org/>.
+
+2. RStudio: <https://posit.co/download/rstudio-desktop/>.
+
+3. Git: <https://git-scm.com/> (optional, if you want to push and pull changes to Github from RStudio).
+
+The results of laboratory work must be placed in your repository on Github in the files `LabX.Rmd` (or `LabX.qmd` if you prefer to use quarto) and generated from it `LabX.html`, where X is the number of the laboratory in the form: **question**, **code**, **result** (if necessary). So, the file structure could looks like:
+
+```
+--ComputerSupportSTU
+  |--Lab1.Rmd
+  |--Lab1.html
+```
+
+
+Example of output:
+
+1.  Print rownames of dataset `mtcars`.
+
+```{r}
+row.names(mtcars)
+```
+
+## Task 0
+
+1.  Create Github accout
+2.  Create new repository "ComputerSupportSTU"
+3.  In readme.md file add title a short repository description
+
+## Task 1
+
+1. Create variables with all atomic types. Atomic types: `character`, `numeric`, `integer`, `complex`, `logical`.
+
+2. Create the next vectors:
+  * sequence from 5 to 75;
+  * numbers: 3.14, 2.71, 0, 13;
+  * with 100 `TRUE` values.
+
+3. Create the next matrix:
+
+|  |   |  |
+|:---:|:-----:|:---:|
+| 12  | 34    | 87  |
+| -12 | -12.1 | 0   |
+| 3.6 | 0.5   | 1.3 |
+
+4. Create a `list` with all atomic types.
+
+5. Create a `factor` with 3 levels: `infant`, `child`, `adult`.
+
+6. Create a `data frame`
+
+7. Change column names of the `data frame`.
+
+
+## Task 2. Exploraring a dataset
+
+For this task you have to use dataset from file `airquality.csv`. The description of the data you can find by the [link](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/airquality).
+
+Example, how to work with the dataset. For instanse, we want to find month (column `Month`) with highest mean temperature (`Temp`)
+
+
+```{r message=FALSE}
+library(dplyr)
+
+airquality |> 
+  group_by(Month) |> 
+  summarise(mean_temp = mean(Temp)) |> 
+  filter(mean_temp == max(mean_temp))
+```
+
+You task is to answer the following questions about this data by writing appropriate code.
+
+1. What are the column names of the data frame?
+
+2. What are the row names of the data frame?
+
+3. Extract the first 6 rows of the data frame and print them to the console
+
+4. How many observations (i.e. rows) are in this data frame?
+
+5. Extract the last 6 rows of the data frame and print them to the console
+
+6. How many missing values are in the "Ozone" column of this data frame?
+
+7. What is the mean of the "Ozone" column in this dataset? Exclude missing values (coded as NA) from this calculation.
+
+8. Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90.
+
+## Task 3. Subsetting data
+
+1. Create the next random vector:
+
+```{r message=FALSE}
+v <- rnorm(50)
+```
+
+For the vector print:
+
+- 10th item;
+- items from 10th to 20th (including 20th item);
+- 10 items starting from 5th;
+- all items bigger than 0.
+
+2. Create the next data frame:
+
+```{r message=FALSE}
+df <- 
+  data.frame(a = rnorm(50), b = 1:50, 
+             cc = sample(letters, 50, replace = TRUE))
+
+```
+
+For the data frame find and print:
+
+- the last 10 rows;
+- 15th item of columns `cc`;
+- subset columns `a`and `b` and rows from 10th to 20th (including 20th);
+- a new vector from column `b`.
+
+## Task 4. Functions
+
+Create the next functions and test them with a few different arguments:
+
+1. Function `above(x, n)` which returns all items of vector `x` that more than `n`. By default `n = 10`. For instance, `above(c(3, 5, 6), 5)` returns `6`.
+
+2. Function `my_ifelse(x, exp, n)` which compares all items of vector `x` with `n` using expression `exp`. `exp` can be `<`, `<=`, `>`, `=>`, `==`. For instance, `exp(c(3, 5, 6), "=>", 5)` returns `5, 6`.
+
+3. Function `my_columnmean(df, removeNA)` that returns mean value for each column of data frame or matrix `df`. Logical argument `removeNA` set whether remove NA values or not. By default `removeNA = True`. Use loop `for` of `while` for the function.
+
+
+
+
+
+
