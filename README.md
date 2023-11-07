@@ -4,5 +4,5 @@ This is course about Data Analysis with R language for students of department of
 Repo structure:
 
 - **pdf** - folder with lectures.
-- **practical_task.Rmd, practical_task.html** - tasks for students.
+- **practical_task.Rmd, [practical_task.html](http://htmlpreview.github.io/?https://github.com/Yehorchenkov/ComputerSupportSTU2023/blob/main/practical_task.html)** - tasks for students.
 - **Task1.Rmd** - template for assignment.
