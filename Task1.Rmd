@@ -1,0 +1,53 @@
+---
+title: "task1"
+output: html_document
+date: "2023-11-07"
+---
+
+1. Create variables with all atomic types. Atomic types: `character`, `numeric`, `integer`, `complex`, `logical`.
+
+```{r}
+var1 <- "character"
+class(var1)
+
+var2 <- 6.5544
+class(var2)
+
+var3 <- 6L
+class(var3)
+
+var4 <- 5+7i
+class(var4)
+
+var5 <- TRUE
+class(var5)
+```
+
+
+2. Create the next vectors:
+  * sequence from 5 to 75;
+  * numbers: 3.14, 2.71, 0, 13;
+  * with 100 `TRUE` values.
+  
+```{r}
+seq1 <- 5:75
+seq1
+```
+
+
+3. Create the next matrix:
+
+|  |   |  |
+|:---:|:-----:|:---:|
+| 12  | 34    | 87  |
+| -12 | -12.1 | 0   |
+| 3.6 | 0.5   | 1.3 |
+
+4. Create a `list` with all atomic types.
+
+5. Create a `factor` with 3 levels: `infant`, `child`, `adult`.
+
+6. Create a `data frame`
+
+7. Change column names of the `data frame`.
+
