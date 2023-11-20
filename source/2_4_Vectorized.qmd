@@ -1,0 +1,43 @@
+---
+title: "Vectorized"
+institute: "Department of Spatial Planning"
+author: "Dr.Sc. Oleksii Yehorchenkov"
+format:
+    revealjs:
+        transition: none
+        slide-number: true
+        theme: default
+        revealjs-plugins:
+        - pdfexport
+title-slide-attributes:
+    data-background-image: images/STU-anfh_full.png
+    data-background-size: 40%
+    data-background-position: 2% 2%
+---
+
+## Vectorized Operations
+
+Many operations in R are vectorized making code more efficient, concise, and easier to read.
+
+```{r}
+#| echo: true
+
+x <- 1:4; y <- 6:9
+x + y
+x > 2
+x >= 2
+y == 8
+x * y
+x / y
+```
+
+## Vectorized Matrix Operations
+
+```{r}
+#| echo: true
+
+x <- matrix(1:4, 2, 2); y <- matrix(rep(10, 4), 2, 2)
+x * y # element-wise multiplication
+x / y
+x %*% y # true matrix multiplication
+```
