@@ -136,7 +136,7 @@ Create the next functions and test them with a few different arguments:
 
 1. Function `above(x, n)` which returns all items of vector `x` that more than `n`. By default `n = 10`. For instance, `above(c(3, 5, 6), 5)` returns `6`.
 
-2. Function `my_ifelse(x, exp, n)` which compares all items of vector `x` with `n` using expression `exp`. `exp` can be `<`, `<=`, `>`, `=>`, `==`. For instance, `exp(c(3, 5, 6), "=>", 5)` returns `5, 6`.
+2. Function `my_ifelse(x, exp, n)` which compares all items of vector `x` with `n` using expression `exp`. `exp` can be `<`, `<=`, `>`, `>=`, `==`. For instance, `exp(c(3, 5, 6), ">=", 5)` returns `5, 6`.
 
 3. Function `my_columnmean(df, removeNA)` that returns mean value for each column of data frame or matrix `df`. Logical argument `removeNA` set whether remove NA values or not. By default `removeNA = True`. Use loop `for` of `while` for the function.
 
