@@ -140,6 +140,13 @@ Create the next functions and test them with a few different arguments:
 
 3. Function `my_columnmean(df, removeNA)` that returns mean value for each column of data frame or matrix `df`. Logical argument `removeNA` set whether remove NA values or not. By default `removeNA = True`. Use loop `for` of `while` for the function.
 
+## Task 5. Visualisations
+
+1. Select a dataset for your own. The source of data can be [Kaggle](https://www.kaggle.com/datasets), [UC Irvine](https://archive.ics.uci.edu/datasets), [data.gov.sk](https://data.gov.sk) or other sources.
+
+2. Build 3 different visualizations, for example scatterplot, histogram and boxplot based on columns of the dataset.
+
+For building visualizations you can use [ggplot2](https://ggplot2.tidyverse.org/) (preferable) or [base plotting system](https://bookdown.org/rdpeng/exdata/the-base-plotting-system-1.html).
 
 
 
